@@ -1,6 +1,9 @@
+variable "bucket_name" {
+  default = "s3-lambda-dynamodb-v1"
+}
 variable "versioning" {
   type    = string
-  default = true
+  default = false
 }
 variable "bucket_acl" {
   type    = string

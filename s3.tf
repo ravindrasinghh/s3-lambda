@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "this" {
-  bucket = "v1-dynamodb-test-v2"
+  bucket = var.bucket_name
   acl    = var.bucket_acl
 
   versioning {
