@@ -24,6 +24,6 @@ resource "aws_s3_bucket_public_access_block" "this" {
 }
 resource "aws_s3_bucket_object" "this" {
   bucket = aws_s3_bucket.this.id
-  key    = "employee.csv"
-  etag = filemd5("employee.csv")
+  key    = "employees.csv"
+  etag = filemd5("employees.csv")
 }
