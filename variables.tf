@@ -1,6 +1,15 @@
-variable "bucket_name" {
-  default = "s3-lambda-dynamodb-v1"
+#### Generic Variables
+
+variable "application" {
+  type = string
 }
+variable "environment" {
+  type = string
+}
+variable "use_case" {
+  type = string
+}
+
 variable "versioning" {
   type    = string
   default = false

@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "this" {
-  bucket = var.bucket_name
+  bucket = local.global_name
   acl    = var.bucket_acl
 
   versioning {
@@ -26,4 +26,5 @@ resource "aws_s3_bucket_object" "this" {
   bucket = aws_s3_bucket.this.id
   key    = "employees.csv"
   etag = filemd5("employees.csv")
+  content_type = "text/csv"
 }
