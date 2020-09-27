@@ -28,3 +28,17 @@ variable "restrict_public_buckets" {
 variable "function_name" {
   default = "s3-lmabda-v1"
 }
+### Api Gateway Variables
+
+variable "binary_media_types" {
+  type    = list
+  default = []
+}
+variable "endpoint_configuration" {
+  type    = list
+  default = ["REGIONAL"]
+}
+variable "api_key_source" {
+  type    = string
+  default = "HEADER"
+}
