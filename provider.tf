@@ -7,7 +7,7 @@ terraform {
   backend "s3" {
     bucket  = "s3-dynamodb-v1"
     key     = "terraform.tfstate"
-    region  = "us-east-2"
+    region  = "ap-southeast-1"
     profile = "default"
   }
 }
