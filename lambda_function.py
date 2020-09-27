@@ -13,12 +13,12 @@ def lambda_handler(event, context):
     employees = data.split("\n")
     for emp in employees:
         print(emp)
-    #     emp_data = emp.split(",")
-    # #added to dynamodb
-    #     table.put_item(
-    #         Item = {
-    #             "id" : emp_data[0],
-    #             "name" : emp_data[1],
-    #             "location" : emp_data[2]
-    #         }
-    #     )        
+        emp_data = emp.split(",")
+    #added to dynamodb
+        table.put_item(
+            Item = {
+                "id" : emp_data[0],
+                "name" : emp_data[1],
+                "location" : emp_data[2],
+            }
+        )        

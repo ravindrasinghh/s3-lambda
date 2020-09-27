@@ -25,3 +25,6 @@ variable "restrict_public_buckets" {
   default = true
   type    = bool
 }
+variable "function_name" {
+  default = "s3-lmabda-v1"
+}
