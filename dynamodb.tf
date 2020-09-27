@@ -11,6 +11,6 @@ resource "aws_dynamodb_table" "dynamodb-table" {
   }
 
   tags = {
-    Name        = "Created by terraform"
+    Name        = local.tags
   }
 }
